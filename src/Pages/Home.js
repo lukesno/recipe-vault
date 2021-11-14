@@ -10,13 +10,20 @@ import './Home.css';
 
 function Home() {
   return (
-    <div className="example">
-        <h1>Welcome to Recipe Vault!</h1>
-        <img></img>
-        {/* This is a button that will direct the user to the main page */}
-        <Link to="main">Get Started </Link>
-    </div>
+    <html>
+     <head>
+      	<title>Sprout</title>
 
+     </head>
+     <body>
+        <h1>Welcome to Recipe Vault!</h1>
+      
+    <div className="hero">
+      {/* This is a button that will direct the user to the main page */}
+      <Link to="main"class="button">Get Started </Link>
+    </div>
+     </body>
+    </html>
 
   );
 }

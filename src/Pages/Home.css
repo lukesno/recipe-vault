@@ -1,3 +1,30 @@
-.example {
-    background-color: red;
+
+body {
+    background-color: #15232e;
+    color: white;
+	font-family: Georgia, serif;
+	height: 100%;
+	margin: 0;
+	text-align: center;
+	width: 100%;
 }
+h1 {
+	font-size: 100px;
+}
+
+.hero {
+	background-image: url('https://images.unsplash.com/photo-1563865436874-9aef32095fad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80');
+	background-position: center top;
+	background-size: cover;
+	padding: 250px;
+	margin: 30px;
+	font-family: 'Trebuchet MS', 'Georgia';
+    text-decoration: none;
+}
+.button {
+    font: bold 75px Georgia;
+    text-decoration: none;
+    background-color: #1d3140;
+    color: white;
+    padding: 50px 90px 50px 90px;
+  }
