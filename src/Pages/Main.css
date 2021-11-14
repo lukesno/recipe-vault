@@ -1,4 +1,4 @@
-body {
+.main-container {
     background-color: #15232e;
     color: white;
 	font-family: Georgia, serif;
@@ -7,13 +7,7 @@ body {
 	text-align: center;
 	width: 100%;
 }
-h1 {
-	font-size: 100px;
-}
 
-h2{
-    font-size: 35px;
-}
 .empty {
 	background-image: url('https://fazewp-fazemediainc.netdna-ssl.com/cms/wp-content/uploads/2015/06/o-EMPTY-FRIDGE-facebook.jpg');
 	background-position: center center;
@@ -23,7 +17,6 @@ h2{
 }
 
 .ingredient button{
-
     font: bold 75px Georgia;
     text-decoration: none;
     background-color: #1d3140;
@@ -32,7 +25,6 @@ h2{
 }
 
 .recipe button{
-
     font: bold 75px Georgia;
     text-decoration: none;
     background-color: #1d3140;

@@ -7,23 +7,31 @@ import {
 } from "react-router-dom";
 import Main from './Main.js';
 import './Home.css';
+import logo from './transparent_logo.png';
 
 function Home() {
   return (
-    <html>
-     <head>
-      	<title>Recipe Vault Home</title>
+    <div className="home-container">
+        <div className="image-container" />
+        <div className="overlay-container"></div>
 
-     </head>
-     <body>
-        <h1>Welcome to Recipe Vault!</h1>
-      
-    <div className="hero">
-      {/* This is a button that will direct the user to the main page */}
-      <Link to="main"class="button">Get Started </Link>
+        <div className="home-title">
+            <div className="home-title-text">
+              <img style={{width: "120px", height: "auto"}} src={logo}></img>
+              <b>Recipe Vault</b>
+            </div>
+            <div style={{fontSize: "25px", color: "#ffffff"}}>
+              Left over groceries? No problem. 
+            </div>
+            <div style={{fontSize: "25px", color: "#ffffff"}}>
+              We'll take care of that for you :)
+            </div>
+            <div className="home-navigate">
+              <Link to="main" class="home-button">Get Started </Link>
+            </div>        
+        </div>
     </div>
-     </body>
-    </html>
+
 
   );
 }
