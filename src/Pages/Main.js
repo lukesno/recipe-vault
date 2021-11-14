@@ -1,4 +1,5 @@
 import React from "react";
+import "./Main.css";
 import {
     BrowserRouter,
     Routes,
@@ -8,22 +9,31 @@ import {
 
 function Main() {
   return (
-    <div>
-        <h1>You're at the main page! (Remove this later)</h1>
-
-        <div>No ingredients yet! Click the button below to search your refrigerator</div>
+    <html>
+     <head>
+      	<title>Recipe Vault Main</title>
+        
+     </head>
+     <body>
+        <h1>What's in the Fridge?</h1>
+      <div className="empty">
+        
+      </div>
+        <h2>Oops! Looks like you don't have any ingredients. Click the button to get ingredients.</h2>
 
 
         {/* This is a button that will retrieve the ingredients in your refrigerator */}
         {/* GET request made to Raspberry PI here */}
         {/* Once we get data from the GET request, populate a list component that users can dynamically add and remove items */}
+      <div className="ingredient button">
         <button>Get Ingredients</button>
-
+      </div>
         {/* Make this button only clickable when user has ingredients */}
-        <Link to="result">Get Recipes</Link>
-
-        
-    </div>
+      <div className="ingredient button">
+        <button>Get Recipes</button>
+      </div>
+      </body>
+    </html>
 
 
   );

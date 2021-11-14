@@ -1,0 +1,41 @@
+body {
+    background-color: #15232e;
+    color: white;
+	font-family: Georgia, serif;
+	height: 100%;
+	margin: 0;
+	text-align: center;
+	width: 100%;
+}
+h1 {
+	font-size: 100px;
+}
+
+h2{
+    font-size: 35px;
+}
+.empty {
+	background-image: url('https://fazewp-fazemediainc.netdna-ssl.com/cms/wp-content/uploads/2015/06/o-EMPTY-FRIDGE-facebook.jpg');
+	background-position: center center;
+	background-size: cover;
+	padding: 250px;
+	margin: 30px;
+}
+
+.ingredient button{
+
+    font: bold 75px Georgia;
+    text-decoration: none;
+    background-color: #1d3140;
+    color: white;
+    padding: 30px 70px 30px 70px;
+}
+
+.recipe button{
+
+    font: bold 75px Georgia;
+    text-decoration: none;
+    background-color: #1d3140;
+    color: white;
+    padding: 30px 70px 30px 70px;
+}
