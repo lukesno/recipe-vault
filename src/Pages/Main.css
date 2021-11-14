@@ -1,11 +1,18 @@
 .main-container {
-    background-color: #15232e;
-    color: white;
-	font-family: Georgia, serif;
-	height: 100%;
-	margin: 0;
+    background-color: #fff4b0;
+    color: black;
+	font-family: 'Sora', sans-serif;
+	height: 100vh;
+	/* margin: 0; */
 	text-align: center;
 	width: 100%;
+}
+
+.list-container {
+    padding-left: 17%;
+    padding-right: 17%;
+    /* margin-top: 10%;
+    margin-bottom: 10%; */
 }
 
 .empty {
@@ -16,7 +23,7 @@
 	margin: 30px;
 }
 
-.ingredient button{
+.ingredient-button{
     font: bold 75px Georgia;
     text-decoration: none;
     background-color: #1d3140;
@@ -24,10 +31,10 @@
     padding: 30px 70px 30px 70px;
 }
 
-.recipe button{
+/* .recipe-button{
     font: bold 75px Georgia;
     text-decoration: none;
     background-color: #1d3140;
     color: white;
     padding: 30px 70px 30px 70px;
-}
+} */

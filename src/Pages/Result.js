@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { findRenderedComponentWithType } from "react-dom/test-utils";
 import Recipe from "../Components/Recipe.js";
 import './Result.css';
@@ -11,6 +11,45 @@ function Result() {
     // 2. With recipe IDs received, make API request to obtain detailed data for each
     //    recipe found
     // 3. Map each data object to a Recipe component
+
+    const items = ["apple", "tangerine", "bread", "banana", "strawberry"]
+    const [data, setData] = useState([])
+    const [fullData, setFullData] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        fetch('https://api.spoonacular.com/recipes/findByIngredients?apiKey=d5b6fd61c628414788a8a5253e62ab85&ingredients=banana,strawberry,apple,bread,mandarin&number=10')
+        .then(response => response.json())
+        .then(dta => {
+            for(var i = 0; i < dta.length; i++) {
+                fetch(`https://api.spoonacular.com/recipes/${dta[i].id}/information?apiKey=d5b6fd61c628414788a8a5253e62ab85`)     
+                    .then(response => response.json())
+                    .then(dta2 => {
+                        setFullData(x => [...x, dta2])
+                    });
+            }
+        })
+        // .then(() => {
+        //     const rows = fullData.reduce((rows, key, index) => {
+        //         return (index % 2 == 0 ? rows.push([key]) : rows[rows.length - 1].push(key)) && rows;
+        //      }, [])
+            
+        //     setFullData(rows)
+        // })
+        .then(setLoading(false));
+    
+
+
+        console.log("hi")
+        
+
+    }, [])
+
+    // useEffect(() => {
+    //     console.log("load triggered")
+    //     console.log(fullData);
+    // }, [loading])
+
     const fake = {
         //get these from detailed recipe search
         title: "Cranberry Cupcakes",
@@ -81,26 +120,43 @@ function Result() {
     }
 
     const fakeArr = [fake, fake, fake, fake, fake, fake]
-    const rows = fakeArr.reduce((rows, key, index) => {
-        return (index % 2 == 0 ? rows.push([key]) : rows[rows.length - 1].push(key)) && rows;
-    }, []);
 
-    return (
-        <div>
-            <h1>Recipes Retrieved</h1>
-            <div>
-                {rows.map(row => {
-                  return(             
-                   <Row>
-                    {row.map(col => (<Col><Recipe data={col}></Recipe></Col>))}
-                   </Row>       
-                  );
-                })}
+
+    if(fullData.length > 0) {
+        return (
+            <div className="result-container">
+                {console.log("hi")}
+                {console.log(fullData)}
+                <h1 className="result-title">Recipes Retrieved</h1>
+                <div>
+                    {fullData.map(row => {
+                        console.log(row)
+                        return(   
+                            (<Col><Recipe data={row}></Recipe></Col>)
+                        // <Row>
+                        // {row.map(col =>{
+                        //     console.log(col);
+                        //     return (
+                        //         (<Col><Recipe data={col}></Recipe></Col>)
+                        //     );
+                        // })}
+                        // </Row>       
+                        );
+                    })}
+                </div>
+                
             </div>
+                
+    
+    
             
-        </div>
-        
-    );
+        );
+    } else {
+        return (
+            <div>loading</div>
+        );
+    }
+
 }
 
 export default Result;

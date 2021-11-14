@@ -1,3 +1,13 @@
-.result-container {
+/* .result-container {
     display: flex;
-} 
+}  */
+
+.result-container {
+    font-family: 'Sora', sans-serif;
+}
+
+.result-title {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}

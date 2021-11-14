@@ -35,7 +35,7 @@ function RecipeModal(props) {
               {ReactHtmlParser(data.summary)}
           </p>
 
-          <h4 style={{marginTop: "24px"}}>Ingredients you have:</h4>
+          {/* <h4 style={{marginTop: "24px"}}>Ingredients you have:</h4>
           <div style={{display: "flex", justifyContent: "flex-start"}}>
             {data.usedIngredients.map((item) => {
               return (
@@ -57,14 +57,15 @@ function RecipeModal(props) {
                   </div>
                 );
               })}
-          </div>
+          </div> */}
 
           <h4 style={{marginTop: "24px"}}>Instructions</h4>
-          {data.analyzedInstructions.steps.map(step => {
+
+          {data.analyzedInstructions.length != 0 ? data.analyzedInstructions[0].steps.map(step => {
             return(
               <Instruction number={step.number} desc={step.step}/>
             );
-          })}
+          }) : <div></div>}
           
         </Modal.Body>
         <Modal.Footer>
