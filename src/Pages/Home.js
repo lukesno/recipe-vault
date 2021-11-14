@@ -12,7 +12,7 @@ function Home() {
   return (
     <html>
      <head>
-      	<title>Sprout</title>
+      	<title>Recipe Vault Home</title>
 
      </head>
      <body>

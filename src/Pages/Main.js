@@ -25,9 +25,11 @@ function Main() {
         <button>Get Ingredients</button>
 
         {/* Make this button only clickable when user has ingredients */}
+
         <button>Get Recipes</button>
       </body>
     </html>
+
 
   );
 }

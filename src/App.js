@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from './Pages/Home.js';
 import Main from "./Pages/Main.js";
+import Result from "./Pages/Result.js";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/main" element={<Main/>}/>
+        <Route path="/main/result" element={<Result/>}/>
       </Routes>
     </BrowserRouter>
   );
