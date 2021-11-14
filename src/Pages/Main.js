@@ -8,7 +8,12 @@ import {
 
 function Main() {
   return (
-    <div>
+    <html>
+     <head>
+      	<title>Recipe Vault Home</title>
+
+     </head>
+     <body>
         <h1>You're at the main page! (Remove this later)</h1>
 
         <div>No ingredients yet! Click the button below to search your refrigerator</div>
@@ -21,9 +26,8 @@ function Main() {
 
         {/* Make this button only clickable when user has ingredients */}
         <button>Get Recipes</button>
-        
-    </div>
-
+      </body>
+    </html>
 
   );
 }
