@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ReactHtmlParser from 'react-html-parser';
+
 import './Recipe.css';
 import Button from 'react-bootstrap/Button';
 import RecipeModal from './RecipeModal.js';
@@ -26,10 +26,6 @@ function Recipe(recipe) {
                     data={data}
                 />
             </div>
-            {/* <p>
-                {ReactHtmlParser(data.summary)}
-            </p> */}
-            
         </div>
     );
 }
